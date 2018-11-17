@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 import { HomePage } from '../home/home.page';
 import { AboutPage } from '../about/about.page';
-import { ContactPage } from '../contact/contact.page';
+// import { ContactPage } from '../contact/contact.page';
 
 const routes: Routes = [
   {
@@ -24,12 +24,14 @@ const routes: Routes = [
       {
         path: 'about',
         outlet: 'about',
+        // loadChildren: '../about/about.module#AboutPageModule'
         component: AboutPage
       },
       {
         path: 'contact',
         outlet: 'contact',
-        component: ContactPage
+         loadChildren: '../contact/contact.module#ContactPageModule'
+        //component: ContactPage
       }
     ]
   },
